@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+  nginx:
+    image: my_nginx_image
+    ports:
+      - "80:80"
+    volumes:
+      - nginx.config:/etc/nginx/nginx.conf
+    restart: always
+volumes:
+  nginx.config
